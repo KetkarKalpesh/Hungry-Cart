@@ -1,19 +1,19 @@
 <template>
     <lightning-card title="Parent">
-        <div class="slds-p-around_medium">
+        <div class="slds-var-m-around__medium">
             <lightning-input 
                 label="Parent Input" 
                 value={parentInputValue} 
                 onchange={handleParentInputChange}>
             </lightning-input>
             <lightning-button 
-                variant="brand" 
-                label="Submit to Child"  
+                variant='brand' 
+                label='Submit to Child'  
                 onclick={handleSubmitToChild}>
             </lightning-button>
             <c-child-component 
                 inputvalue={childInputValue} 
-                onchildchange={handleChildInputChange}>
+                onchildchange={child}>
             </c-child-component>
         </div>
     </lightning-card>

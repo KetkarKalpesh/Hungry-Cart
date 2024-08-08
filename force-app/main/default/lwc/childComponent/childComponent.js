@@ -1,15 +1,15 @@
 import { LightningElement, api } from 'lwc';
 
 export default class ChildComponent extends LightningElement {
-    @api inputValue = '';
+    @api childInputValue;
 
     handleChildInputChange(event) {
-        this.inputValue = event.target.value;
+        this.childInputValue = event.target.value;
     }
 
     handleSubmitToParent() {
-        const inputChangeEvent = new CustomEvent('childchange', {
-            detail: { value: this.inputValue }
+        const inputChangeEvent = new new CustomEvent('childChange', {
+            detail: {value: this.childInputValue}
         });
         this.dispatchEvent(inputChangeEvent);
     }
