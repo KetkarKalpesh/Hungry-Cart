@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Please enter your name here">
+        <div class="slds-p-around_medum slds-box">
+            <lightning-input
+                type="text"
+                label="Enter First Name"
+                value={firstName}
+                onchange={handleFirstNameChange}
+                name="firstN"></lightning-input>
+            <br/>
+            <lightning-input
+                type="text"
+                label="Enter Last Name"
+                value={lastName}
+                onchange={handleLastNameChange}
+                name="lastN"></lightning-input>
+            <br/>
+            <lightning-button 
+                variant="brand" 
+                label="Publish Data" 
+                onclick={handlePublishData}></lightning-button>
+        </div>
+    </lightning-card>
+</template>
