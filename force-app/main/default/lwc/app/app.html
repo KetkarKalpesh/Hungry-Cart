@@ -1,0 +1,9 @@
+<template>
+    <template if:true={showLogin}>
+        <c-login-component onnavigate={handleNavigation}></c-login-component>
+    </template>
+    
+    <template if:true={showOtpPage}>
+        <c-otp-component></c-otp-component>
+    </template>
+</template>
